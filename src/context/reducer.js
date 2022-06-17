@@ -5,8 +5,8 @@ const reducer = (state, action)=> {
         case ADD:
             return [...state, action.payload]
         case REMOVE:
-            state.filter(todo => (todo.id !== action.payload));
-            return [...state]
+            return state.filter(todo => (todo.id !== action.payload));
+           
         default:
             return state;
     }
