@@ -1,3 +1,9 @@
 .display{
-    display: flex;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.text-bg-primary{
+    border-radius: 7px;
 }
