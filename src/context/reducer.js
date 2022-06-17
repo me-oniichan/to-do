@@ -1,6 +1,4 @@
-export const ADD = "add";
-export const REMOVE = "remove";
-
+import { ADD, REMOVE } from "./action.type";
 
 const reducer = (state, action)=> {
     switch(action.type){

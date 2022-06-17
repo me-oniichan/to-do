@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { v4 } from "uuid";
 import { todoContext } from "../context/Context";
-import { ADD } from "../context/reducer";
+import { ADD } from "../context/action.type";
 
 export default function TodoForm() {
     const { dispatch } = useContext(todoContext);

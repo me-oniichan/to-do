@@ -1,12 +1,11 @@
 import { useContext } from "react"
 import { todoContext } from "../context/Context"
-import { REMOVE } from "../context/reducer"
+import { REMOVE } from "../context/action.type"
 
 const TodoList = () => {
 
-    const { dispatch, todos}  = useContext(todoContext);
+    const { todos, dispatch}  = useContext(todoContext);
     console.log(todos);
-    // return <div>{todos}</div>;
     return (
         <ul className="list-group">
             {
