@@ -2,13 +2,15 @@ export const ADD = "add";
 export const REMOVE = "remove";
 
 
-export function reducer(state, action){
+const reducer = (state, action)=> {
     switch(action.type){
         case ADD:
-            return state.push(action.payload);
+            return [...state, action.payload]
         case REMOVE:
-            return state.filter(todo => (todo.id !== action.payload));
+            state.filter(todo => (todo.id !== action.payload));
+            return [...state]
         default:
             return state;
     }
 }
+export default reducer;
