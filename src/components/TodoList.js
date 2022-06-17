@@ -4,13 +4,13 @@ import { REMOVE } from "../context/action.type"
 
 const TodoList = () => {
 
-    const { todos, dispatch}  = useContext(todoContext);
-    console.log(todos);
+    const [todos, dispatch]  = useContext(todoContext);
+
     return (
         <ul className="list-group">
             {
                 todos.map(todo => (
-                    <li className="list-group-item justify-content-between align-items-center" id={todo.id}>
+                    <li className="list-group-item d-flex justify-content-between align-items-center" id={todo.id}>
                         {todo.value}
                         <button type="button" className="btn-close" aria-label="Close" onClick={() => {
                             dispatch({

@@ -1,7 +1,7 @@
 .display{
     max-width: 800px;
     margin: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .text-bg-primary{

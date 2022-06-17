@@ -4,11 +4,10 @@ import { todoContext } from "../context/Context";
 import { ADD } from "../context/action.type";
 
 export default function TodoForm() {
-    const { dispatch } = useContext(todoContext);
-
+    const dispatch= useContext(todoContext)[1];
     const [val, setVal] = useState("");
     function sendVal(e) {
-        e.preventDefault();
+        e.preventDefault()
         if (val === "") return alert("Enter some value");
         dispatch({
             type: ADD,

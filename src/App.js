@@ -7,10 +7,9 @@ import { todoContext } from "./context/Context"
 export default function App() {
 
   const [todo, dispatch] = useReducer(reducer, []);
-
   return (
     <div className="container display mt-5">
-      <todoContext.Provider value={{ todo, dispatch }}>
+      <todoContext.Provider value={[ todo, dispatch ]}>
         <h3 className="text-bg-primary mb-4 p-2">To Do List</h3>
         <TodoList />
         <TodoForm />
